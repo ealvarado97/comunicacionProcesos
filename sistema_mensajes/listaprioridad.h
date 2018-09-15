@@ -3,7 +3,11 @@
 
 #include "colecciones.h"
 
+//class proceso;
+
 class listaPrioridad:public colecciones{
+
+  //  friend class proceso;
 
 public:
 
@@ -12,20 +16,7 @@ public:
     proceso* executar();
     ~listaPrioridad(){}
 
-private:
 
-   class nodo{
-
-   public:
-       nodo(){dato=nullptr;next=nullptr;}
-       proceso* dato;
-       nodo *next;
-
-   };
-
-   nodo *primero;
-   nodo *ultimo;
-   unsigned int size_;
 
 };
 

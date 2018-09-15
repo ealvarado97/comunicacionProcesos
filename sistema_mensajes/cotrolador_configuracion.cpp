@@ -1,5 +1,6 @@
 #include "cotrolador_configuracion.h"
 
+cotrolador_configuracion* cotrolador_configuracion::instancia=nullptr;
 
 sincro__ &cotrolador_configuracion ::getSincro(){
 
@@ -94,4 +95,15 @@ colas cotrolador_configuracion::getCola(){
         return  colas::prioridad;
 
     return  colas::error;
+}
+cotrolador_configuracion *cotrolador_configuracion::getInstancia(){
+
+    if(cotrolador_configuracion::instancia==nullptr)
+        crearInstancia();
+    return cotrolador_configuracion::instancia;
+}
+void cotrolador_configuracion::crearInstancia(){
+
+    if(cotrolador_configuracion::instancia==nullptr)
+        cotrolador_configuracion::instancia=new cotrolador_configuracion();
 }

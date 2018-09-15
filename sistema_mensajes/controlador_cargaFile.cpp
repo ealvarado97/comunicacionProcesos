@@ -1,6 +1,5 @@
 #include "controlador_cargaFile.h"
 
-
 std::string controlador_CargaConfi::getSincroSendRecv(const char* sendRecv){
 
     getline(archivo,linea);

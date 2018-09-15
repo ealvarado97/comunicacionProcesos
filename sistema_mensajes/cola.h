@@ -3,16 +3,21 @@
 
 #include "colecciones.h"
 
+class iterador;
+
 class Cola:public colecciones {
+
+    friend class iterador;
 
 public:
 
-    Cola(){primero=nullptr;ultimo=nullptr;size_=0;}
+    Cola(){}//primero=nullptr;ultimo=nullptr;size_=0;}
     bool insertar(proceso*);
     proceso*executar();
    ~Cola(){}
 
- private:
+
+/*private:
 
     class nodo{
 
@@ -26,6 +31,10 @@ public:
     nodo *primero;
     nodo *ultimo;
     unsigned int size_;
+
+*/
+
+
 
 };
 

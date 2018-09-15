@@ -6,7 +6,7 @@ listaPrioridad::listaPrioridad()
 }
 bool listaPrioridad::insertar(proceso *p){
 
-    unsigned int prioridad =p->prioridad;
+    unsigned int prioridad =p->getPrioridad();
 
     nodo *aux=new nodo();
     aux->dato=p;
@@ -18,7 +18,7 @@ bool listaPrioridad::insertar(proceso *p){
         nodo *temp =primero;
         nodo *aux2=nullptr;
 
-        while(temp!=nullptr &&prioridad >temp->dato->prioridad){
+        while(temp!=nullptr &&prioridad >temp->dato->getPrioridad()){
 
             aux2=temp;
             temp=temp->next;
@@ -33,7 +33,7 @@ bool listaPrioridad::insertar(proceso *p){
 
             aux2->next=aux;
 
-        }else if(prioridad<temp->dato->prioridad){
+        }else if(prioridad<temp->dato->getPrioridad()){
 
             aux2->next=aux;
             aux->next=temp;

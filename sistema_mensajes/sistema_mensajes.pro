@@ -20,7 +20,8 @@ SOURCES += \
     listaprioridad.cpp \
     controlador.cpp \
     cotrolador_configuracion.cpp \
-    controlador_cargaFile.cpp
+    controlador_cargaFile.cpp \
+    controlador_proceso.cpp
 
 HEADERS += \
     colecciones.h \
@@ -30,4 +31,5 @@ HEADERS += \
     primitivas.h \
     controlador.h \
     cotrolador_configuracion.h \
-    controlador_cargaFile.h
+    controlador_cargaFile.h \
+    controlador_proceso.h
