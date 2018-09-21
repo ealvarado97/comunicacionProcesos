@@ -66,11 +66,11 @@ int main(int argc, char *argv[])
    // controller->send(p2,m2);
 
     //controller->recv(p,m3);
-
+    //cola p1,p2,p3
 
     controller->recv(p3,m);
     controller->send(p2,m2);
-    controller->send(p,m3);
+    //controller->send(p,m3);
 
 
 
