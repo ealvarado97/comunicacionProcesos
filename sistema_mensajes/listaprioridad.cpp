@@ -42,21 +42,40 @@ bool listaPrioridad::insertar(proceso *p){
     size_++;
     return  true;
 }
-proceso* listaPrioridad::executar(){
+proceso* listaPrioridad::executar( ){
 
+    int i=0;
 
-    proceso *temp;
 
     if(size_==0)
         return  nullptr;
 
     nodo *aux=primero;
-    temp=aux->dato;
 
-    primero=aux->next;
+    while (i!=procesoActual){
 
-    delete  aux;
-    size_--;
+        aux=aux->next;
+        i++;
+    }
+    procesoActual++;
 
-    return  temp;
+    return  aux->dato;
+}
+ proceso * listaPrioridad::topExecutar(){
+
+     int i=0;
+
+
+     if(size_==0)
+         return  nullptr;
+
+     nodo *aux=primero;
+
+     while (i!=procesoActual){
+
+         aux=aux->next;
+         i++;
+     }
+
+     return  aux->dato;
 }

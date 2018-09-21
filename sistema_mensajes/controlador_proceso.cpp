@@ -61,7 +61,14 @@ void controlador_proceso::initListaProcesos(){
 
     }
 }
+proceso * controlador_proceso::getProcesoActual(){
 
+    procesos->topExecutar();//consulta el proceso actual sin eliminarlo;
+}
+proceso* controlador_proceso::executarProcesoActual(  ){
+
+    procesos->executar();//regresa un proceso y avanza en la lista
+}
 controlador_proceso *controlador_proceso::getInstancia(){
 
     if(controlador_proceso::instancia==nullptr)

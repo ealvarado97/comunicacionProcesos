@@ -19,6 +19,8 @@ public:
     void printLogsGui(void*);
     static controlador_proceso *getInstancia();
     bool insertarNuevoProceso( proceso*);
+    proceso *getProcesoActual();
+    proceso * executarProcesoActual();
 
 
 private:

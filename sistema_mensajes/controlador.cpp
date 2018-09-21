@@ -15,3 +15,12 @@ bool controlador::insertarNuevoProceso(proceso *p){
 
     return  bandera;
 }
+void controlador::send(proceso *p,mensaje *m){
+
+    ms->send(p,m);
+
+}
+void controlador::recv(proceso *p,mensaje *m){
+
+    ms->recv(p,m);
+}

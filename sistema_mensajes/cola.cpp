@@ -16,7 +16,7 @@ bool Cola::insertar(proceso* p){
 
     return true;
 }
-proceso* Cola::executar(){
+proceso* Cola::executar( ){
 
     proceso *temp;
 
@@ -37,4 +37,7 @@ proceso* Cola::executar(){
 
     return  temp;
 }
+ proceso * Cola::topExecutar(){
 
+
+}

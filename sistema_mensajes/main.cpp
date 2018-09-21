@@ -4,6 +4,7 @@
 #include "listaprioridad.h"
 #include "proceso.h"
 #include "controlador.h"
+#include "mensaje.h"
 
 #include <string>
 
@@ -16,30 +17,10 @@ int main(int argc, char *argv[])
 
 
 
-    proceso *p=new proceso(1,1,estadoProceso::BLOQUEADO);
-    proceso *p2=new proceso(2,3,estadoProceso::BLOQUEADO);
-    proceso *p3=new proceso(3,2,estadoProceso::EJECUTANDO);
+    proceso *p=new proceso(1,1,estadoProceso::EJECUTANDO);
+    proceso *p2=new proceso(2,2,estadoProceso::EJECUTANDO);
+    proceso *p3=new proceso(3,3,estadoProceso::EJECUTANDO);
 
-    //c->insertar(p);
-   // c->insertar(p2);
-   // c->insertar(p3);
-
-   // c->executar();
-  //  c->executar();
-   // c->executar();
-  //  c->executar();
-
- //   c=new listaPrioridad();
-
- //   c->insertar(p3);
- //   c->insertar(p);
- //   c->insertar(p2);
-
-
- //   c->executar();
- //   c->executar();
-  //  c->executar();
-  //  c->executar();
 
     controlador *controller =new controlador();
 
@@ -47,19 +28,6 @@ int main(int argc, char *argv[])
     address__ adress =controller->getAddress();
     format__ format =controller->getFormat();
     colas  cola =controller->getCola();
-
-
-
-
-    std::cout<<format.size<<std::endl;
-    std::cout<<sincro.recv_<<std::endl;
-
-    if(cola==colas::fifo)
-        std::cout<<"fifo"<<std::endl;
-    else if(cola==colas::prioridad)
-        std::cout<<"prioridad"<<std::endl;
-
-    std::cout<<adress.method<<std::endl;
 
     p->nuevoRegistroLog("send p1");
     p->nuevoRegistroLog("recv p2");
@@ -75,27 +43,36 @@ int main(int argc, char *argv[])
     p2->nuevoRegistroLog("recx");
 
 
-
     controller->insertarNuevoProceso(p3);
     controller->insertarNuevoProceso(p);
     controller->insertarNuevoProceso(p2);
 
-    controller->printLogGui(nullptr);
+    mensaje *m=new mensaje();
 
-    controller->printLogGui(nullptr);
+    m->destino=p3;
+    m->origen=p;
+
+    mensaje *m2=new mensaje();
+    m2->destino=new proceso(7,7,estadoProceso::EJECUTANDO);
+    m2->origen=new proceso(9,8,estadoProceso::EJECUTANDO);
+
+    mensaje *m3=new mensaje();
+
+    m3->destino=p;
+    m3->origen=p3;
 
 
+    //controller->send(p3,m);
+   // controller->send(p2,m2);
+
+    //controller->recv(p,m3);
 
 
+    controller->recv(p3,m);
+    controller->send(p2,m2);
+    controller->send(p,m3);
 
 
-
-
-   // std::cout<<controller->getSincroRecv(send.c_str())<<std::endl;
-   // std::cout<<controller->getSincroSend(recv.c_str())<<std::endl;
-
-   // std::cout<<controller->getAddressType()<<std::endl;
-  //  std::cout<<controller->getAddressMethod()<<std::endl;
 
 
 

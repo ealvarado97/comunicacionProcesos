@@ -14,6 +14,7 @@ public:
     listaPrioridad();
     bool insertar(proceso*);
     proceso* executar();
+     proceso * topExecutar();
     ~listaPrioridad(){}
 
 

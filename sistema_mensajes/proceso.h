@@ -15,6 +15,7 @@ public:
     unsigned int getPid()const{return  pID;}
     unsigned int getPrioridad()const{return  prioridad;}
     estadoProceso getEstado()const{return  estado;}
+    void setEstadoProceso(estadoProceso e){this->estado=e;}
 
     void nuevoRegistroLog(const char* reg){log.push_back(reg);}
     std::list<const char*>getRegistrosLog()const{return log;}

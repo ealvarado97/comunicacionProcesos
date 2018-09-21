@@ -14,25 +14,9 @@ public:
     Cola(){}//primero=nullptr;ultimo=nullptr;size_=0;}
     bool insertar(proceso*);
     proceso*executar();
+     proceso * topExecutar();
    ~Cola(){}
 
-
-/*private:
-
-    class nodo{
-
-    public:
-        nodo(){dato=nullptr;next=nullptr;}
-        proceso* dato;
-        nodo *next;
-
-    };
-
-    nodo *primero;
-    nodo *ultimo;
-    unsigned int size_;
-
-*/
 
 
 
