@@ -42,16 +42,24 @@ bool controlador_proceso::insertarNuevoProceso( proceso *p){
     if(procesos==nullptr)
         initListaProcesos();
 
+   //aqui la comparacion
+   // if(procesos->size_<=x){
+
+
     bool bandera=procesos->insertar(p);
     return  bandera;
+
+    //return false //cola esta llena
 
 }
 //se establece si la lista es fifo o prioridad de acuerdo a los parametros generales
 //del sistema,
 void controlador_proceso::initListaProcesos(){
+    // se crea la cola de procesos
 
     cotrolador_configuracion *conf;
     conf=cotrolador_configuracion::getInstancia();
+
 
     switch (conf->getCola()) {
 

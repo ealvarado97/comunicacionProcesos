@@ -2,14 +2,14 @@
 #define MENSAJE_H
 #include "proceso.h"
 
-class mensaje{
+class mensaje{ //para procesos
 
 
 public:
 
     mensaje(){}
 
-    proceso *destino;
+    proceso *destino; //mailbox
     proceso *origen;
     const char* dato;
     long long size;

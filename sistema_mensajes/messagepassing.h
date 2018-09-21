@@ -15,6 +15,9 @@ public:
     void send(proceso *,mensaje *);
     void recv(proceso *,mensaje*);
 
+    //void send(mailbox*,mensaje*);
+    //void recv(mailbox *,mansaje)
+
 
 
 private:
@@ -26,7 +29,10 @@ private:
 
     void Send_(proceso*,mensaje *);
     void Recv_(proceso*, mensaje*);
-    std::list<mensaje> *mensajesPendientes;
+
+
+
+    std::list<mensaje> *mensajesPendientes;//array de msjs
 };
 
 #endif // MESSAGEPASSING_H

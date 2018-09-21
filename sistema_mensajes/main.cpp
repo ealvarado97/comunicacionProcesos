@@ -29,18 +29,32 @@ int main(int argc, char *argv[])
     format__ format =controller->getFormat();
     colas  cola =controller->getCola();
 
-    p->nuevoRegistroLog("send p1");
-    p->nuevoRegistroLog("recv p2");
-    p->nuevoRegistroLog("send p3");
-    p->nuevoRegistroLog("recv p10");
+   // p->nuevoRegistroLog("send p1");
+   // p->nuevoRegistroLog("recv p2");
+   // p->nuevoRegistroLog("send p3");
+    //p->nuevoRegistroLog("recv p10");
 
 
-    p3->nuevoRegistroLog("send p100");
-    p3->nuevoRegistroLog("recv p200");
-    p3->nuevoRegistroLog("send p300");
-    p3->nuevoRegistroLog("recv p1000d");
+    //p3->nuevoRegistroLog("send p100");
+    //p3->nuevoRegistroLog("recv p200");
+    //p3->nuevoRegistroLog("send p300");
+    //p3->nuevoRegistroLog("recv p1000d");
 
-    p2->nuevoRegistroLog("recx");
+    ///p2->nuevoRegistroLog("recx");
+
+
+   // s//witch (format.format_) {  messagePassing::Recv
+
+    //case format::fijo:{
+
+    //copiar el texto send la gui a la variable dato de mesanje strcpy
+
+
+   // }
+
+    //}
+
+
 
 
     controller->insertarNuevoProceso(p3);
