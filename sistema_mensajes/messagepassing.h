@@ -22,6 +22,7 @@ private:
     cotrolador_configuracion *confi;
 
     void link(proceso*,mensaje * );
+    void link_noBlocking(proceso *,mensaje *,bool);
 
     void Send_(proceso*,mensaje *);
     void Recv_(proceso*, mensaje*);
