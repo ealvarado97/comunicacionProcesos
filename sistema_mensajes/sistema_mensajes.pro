@@ -22,7 +22,8 @@ SOURCES += \
     cotrolador_configuracion.cpp \
     controlador_cargaFile.cpp \
     controlador_proceso.cpp \
-    messagepassing.cpp
+    messagepassing.cpp \
+    controladorparagnrals.cpp
 
 HEADERS += \
     colecciones.h \
@@ -35,4 +36,5 @@ HEADERS += \
     controlador_cargaFile.h \
     controlador_proceso.h \
     messagepassing.h \
-    mensaje.h
+    mensaje.h \
+    controladorparagnrals.h

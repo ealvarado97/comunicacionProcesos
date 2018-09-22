@@ -5,6 +5,7 @@
 #include "proceso.h"
 #include "controlador.h"
 #include "mensaje.h"
+#include "controladorparagnrals.h"
 
 #include <string>
 
@@ -14,7 +15,8 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-
+    ControladorParaGnrals *pba= new ControladorParaGnrals();
+    pba->set_largoCola(6);
 
 
     proceso *p=new proceso(1,1,estadoProceso::EJECUTANDO);
